@@ -16,15 +16,15 @@ namespace UnitBrains.Player
         protected override void GenerateProjectiles(Vector2Int forTarget, List<BaseProjectile> intoList)
         {
             float overheatTemperature = OverheatTemperature;
-            ///////////////////////////////////////
-            float currentTemperature = GetTemperature ();
+            float currentTemperature = GetTemperature();
 
-            if (currentTemperature <= overheatTemperature)
+            if (currentTemperature >= overheatTemperature)
             {
                 return;
             }
 
             int projectilesCount = (int)currentTemperature + 1;
+            
 
             for (int i = 0; i < projectilesCount; i++)
             {
@@ -33,7 +33,6 @@ namespace UnitBrains.Player
             }
 
             IncreaseTemperature();
-            ///////////////////////////////////////
         }
 
         public override Vector2Int GetNextStep()
