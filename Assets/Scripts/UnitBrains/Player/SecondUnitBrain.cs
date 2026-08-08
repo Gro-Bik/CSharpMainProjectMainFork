@@ -33,7 +33,7 @@ namespace UnitBrains.Player
             }
 
             IncreaseTemperature();
-            //Имя в телеграмме Niklle(@Nick_Fumo_Konager)
+            //Мое имя в телеграмме Niklle(@Nick_Fumo_Konager)
         }
 
         public override Vector2Int GetNextStep()
